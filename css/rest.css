@@ -122,3 +122,18 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+
+/* 추가사항 */
+a {
+  text-decoration: none;
+  font-family: "LeferiPoint-WhiteA";
+  color: #4b4453;
+}
+
+a:hover {
+  color: #c493ff;
+}
+
+* {
+  box-sizing: border-box;
+}
