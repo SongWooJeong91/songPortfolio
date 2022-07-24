@@ -1,0 +1,45 @@
+.about__wrap {
+	width: 100%;
+	height: 100vh;
+	position: relative;
+}
+.about__wrap h2 {
+	font-size: 10rem;
+	font-family: GangwonEduPowerExtraBoldA;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	opacity: 0.3;
+	padding: 0 2% 0 0;
+	color: #a5d1e6;
+}
+.about__box {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	padding: 6% 10%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.about__img {
+	text-align: center;
+	margin-right: 8%;
+}
+.about__img img {
+	width: 400px;
+	height: 400px;
+	/* padding: 50px; */
+	border-radius: 50%;
+}
+
+.about__box p {
+	/* min-width: 800px; */
+	padding: 50px 0 50px 50px;
+	font-size: 20px;
+	line-height: 1.7;
+	display: flex;
+	align-items: center;
+}
