@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			html,
+			body {
+				width: 100%;
+				height: 100%;
+				margin: 0;
+				padding: 0;
+			}
+			li {
+				list-style: none;
+			}
+			.view {
+				margin: 0 auto;
+				width: 80%;
+				height: 80%;
+				background-color: rgba(0, 0, 0, 0.5);
+				position: relative;
+			}
+			.view ul {
+				padding: 0;
+				margin: 0;
+				display: flex;
+				width: calc(100% * 5);
+				height: 100%;
+				position: absolute;
+				left: calc(-100%);
+				top: 0;
+			}
+			.view ul li {
+				width: 100%;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="view">
+			<ul>
+				<li style="background: tomato">1</li>
+				<li style="background: yellowgreen">2</li>
+				<li style="background: yellow">3</li>
+				<li style="background: skyblue">4</li>
+				<li style="background: palevioletred">5</li>
+			</ul>
+		</div>
+	</body>
+</html>

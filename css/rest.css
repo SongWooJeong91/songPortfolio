@@ -137,10 +137,6 @@ li {
 	list-style: none;
 }
 
-::-webkit-scrollbar {
-	display: none;
-}
-
 /* 폰트 */
 h1,
 h2,
