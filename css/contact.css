@@ -32,7 +32,7 @@
 }
 .contact__box-top p {
 	font-size: 30px;
-	color: #fefc15;
+	/* color: #222; */
 	opacity: 0.8;
 	letter-spacing: 0.1rem;
 }
@@ -49,10 +49,10 @@
 	width: 50px;
 	height: 50px;
 	margin: 10px;
-	fill: #fefc15;
+	/* fill: #222; */
 }
 .contact__box-bottom span {
-	color: #fefc15;
+	/* color: #222; */
 	font-size: 20px;
 	padding-top: 6px;
 	letter-spacing: 0.1rem;

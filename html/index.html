@@ -11,8 +11,8 @@
 		<link rel="stylesheet" href="../css/index.css" />
 
 		<!-- <link rel="stylesheet" href="../css/headerSlide.css" /> -->
-
-		<script src="./main.js" defer></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<!-- <script src="./main.js" defer></script> -->
 	</head>
 
 	<body>
@@ -41,7 +41,7 @@
 			</header>
 			<!-- main -->
 			<section>
-				<div class="main__wrap">
+				<div class="main__wrap content">
 					<h1>
 						송우정의<br />
 						포트폴리오<br />입니다.
@@ -56,7 +56,7 @@
 			</section>
 			<!-- about -->
 			<section>
-				<div class="about__wrap">
+				<div class="about__wrap content">
 					<h2>ABOUT ME</h2>
 					<div class="about__box">
 						<div class="about__img">
@@ -74,7 +74,7 @@
 							보며 배우고 생각하며 발전해가고 있습니다. 저의 누구나 알아볼 수
 							있는 깔끔한 코드를 짜는게 목표입니다. 프로젝트를 하거나 나중에
 							내가 다시 볼 때 느낀점이 내가 짰지만 다시 보면 알아보기 쉽지
-							않았습니다. 프론트엔드 개발자가 되어 발전하는데 다른 큰 노력도
+							<!-- 않았습니다. 프론트엔드 개발자가 되어 발전하는데 다른 큰 노력도
 							필요하지만 저의 목표는 누구나 알아볼 수 있는 깔끔한 코드를 짜는
 							개발자가 되는 것이 저의 목표입니다. 첫 번째로 소통하는 개발자가
 							되고 싶습니다. 개발자는 결국 컴퓨터가 아닌 ‘사람들’과 함께 일하는
@@ -103,7 +103,7 @@
 							성취감을 느낄 수 있었습니다. 당시 기억을 떠올리며 성취감을 얻을 수
 							있는 분야를 배워야겠다는 확신이 생겼으며 '프런트 엔드 개발자'라는
 							직종이 저에게 이러한 것들을 줄 수 있다고 생각했기에 길을 걷게
-							되었습니다.
+							되었습니다. -->
 						</p>
 					</div>
 				</div>
@@ -111,7 +111,7 @@
 			<!-- skills -->
 			<section>
 				<!-- <div class="skills__back"></div> -->
-				<div class="skills__wrap">
+				<div class="skills__wrap content">
 					<h2>SKILLS</h2>
 					<div class="skills__box">
 						<div class="skills01">
@@ -185,19 +185,19 @@
 			</section>
 			<!-- works -->
 			<section>
-				<div class="works__wrap">
+				<div class="works__wrap content">
 					<h2>WORKS</h2>
 					<div class="work__view">
-						<ul class="works__slider">
+						<ul>
 							<li class="works">
 								<div>
 									<img src="../img/9.png" alt="무럭무럭" />
 								</div>
-								<p>무럭무럭</p>
-								<p>
+								<h3>무럭무럭</h3>
+								<!-- <p>
 									React를 기반으로 만든 Todo List App 입니다. Localstorge를
 									사용하여 새로고침해도 정보가 유지됩니다.
-								</p>
+								</p> -->
 							</li>
 							<li class="works">
 								<div>
@@ -208,43 +208,52 @@
 										>
 									</video>
 								</div>
-								<p>PS clone</p>
-								<p>
+								<h3>PS clone</h3>
+								<!-- <p>
 									HTML, CSS, Javascript의 기본기를 익히기 위해 만든 PS&Marketing
 									클론코딩입니다.
-								</p>
+								</p> -->
 							</li>
 							<li class="works">
 								<div>
 									<img src="../img/9.png" alt="Portfolio" />
 								</div>
-								<p>Portfolio</p>
+								<h3>Portfolio</h3>
 							</li>
 							<li class="works">
 								<div>
-									<img src="../img/9.png" alt="궁궁하다" />
+									<video autoplay loop muted preload="auto">
+										<source src="../img/gunggunghada.mp4" type="video/mp4" />
+										<strong
+											>Your browser does not support the video tag.</strong
+										>
+									</video>
 								</div>
-								<p>궁궁하다</p>
+								<h3>궁궁하다</h3>
 							</li>
 							<li class="works">
 								<div>
 									<img src="../img/9.png" alt="과자 물류 ERP" />
 								</div>
-								<p>과자 물류 ERP</p>
+								<h3>과자 물류 ERP</h3>
 							</li>
 							<li class="works">
 								<div>
 									<img src="../img/9.png" alt="음반쇼핑몰" />
 								</div>
-								<p>음반쇼핑몰</p>
+								<h3>음반쇼핑몰</h3>
 							</li>
 						</ul>
+					</div>
+					<div class="works__btnbox">
+						<span class="works__btn select__btn"></span>
+						<span class="works__btn"></span>
 					</div>
 				</div>
 			</section>
 			<!-- contact -->
 			<section>
-				<div class="contact__wrap">
+				<div class="contact__wrap content">
 					<h2>CONTACT US!</h2>
 					<div class="contact__box">
 						<div class="contact__box-top">
@@ -298,7 +307,7 @@
 				</div>
 			</section>
 			<footer>
-				<div class="footer__wrap">
+				<div class="footer__wrap content">
 					<!-- <a class="topBtn" id="topBtn" href="#">
 						TOP
 						<span></span>
