@@ -23,6 +23,7 @@
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
+	border: 1px solid red;
 }
 
 .about__img {
@@ -34,13 +35,21 @@
 	height: 400px;
 	/* padding: 50px; */
 	border-radius: 50%;
+	border: 1px solid red;
 }
 
 .about__box p {
 	/* min-width: 800px; */
-	padding: 50px 0 50px 50px;
+	border: 1px solid red;
+	padding: 30px;
 	font-size: 20px;
 	line-height: 1.7;
 	display: flex;
 	align-items: center;
+}
+@media all and (max-width: 1024px) {
+}
+@media all and (max-width: 768px) {
+}
+@media all and (max-width: 479px) {
 }

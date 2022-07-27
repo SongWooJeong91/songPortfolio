@@ -1,29 +1,36 @@
-let page = 1;
-let lastPage = document.querySelectorAll('.content').length;
+window.addEventListener(
+	'wheel',
+	function (e) {
+		e.preventDefault();
+	},
+	{ passive: false }
+);
 
-window.addEventListener('wheel', (e) => {
-	console.log('휠', e.deltaY);
-	wheelEV(e);
+var $html = $('html');
+var page = 1;
+var lastPage = $('.content').length;
+var navbar = $('.header__wrap');
+let headerWrap = document.querySelector('.header__wrap');
+
+window.addEventListener('scroll', () => {
+	// 문제 발생
+	// 메인 화면이 아닌채로 새로고침 하면 page가 1로 저장되서 메뉴가 나타나지 않음
+	if (page != 1) headerWrap.style.display = 'block';
+	else if (page == 1) headerWrap.style.display = 'none';
 });
 
-// 휠 이벤트 함수
-function wheelEV(e) {
-	// scroll 위치가 0이면 함수 종료
-	if (window.scrollY <= 100) return;
-	// 만약에 스크롤 값이 양수이면
-	if (e.deltaY > 0) {
-		// 만약 마지막 페이지면 함수 종료
+$html.animate({ scrollTop: 0 }, 10);
+$(window).on('wheel', function (e) {
+	if ($html.is(':animated')) return;
+
+	if (e.originalEvent.deltaY > 0) {
 		if (page == lastPage) return;
-		// 페이지 +1
 		page++;
-	} else if (e.deltaY < 0) {
-		// 첫 페이지면 함수 종료
+	} else if (e.originalEvent.deltaY < 0) {
 		if (page == 1) return;
-		// 페이지 -1
 		page--;
 	}
-	// 페이지 -1 * 뷰 높이 곱한 값 저장
-	var scrTo = (page - 1) * $(window).height();
-	// 스크롤을 scrTo 값으로 이동
-	window.scrollTo({ top: scrTo, behavior: 'smooth' });
-}
+	var posTop = (page - 1) * $(window).height();
+
+	$html.animate({ scrollTop: posTop });
+});

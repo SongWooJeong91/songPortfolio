@@ -27,3 +27,13 @@
 	line-height: 1.7;
 	padding: 20px 0;
 }
+@media all and (max-width: 768px) {
+	.main__wrap h1 {
+		font-size: 74px;
+	}
+}
+@media all and (max-width: 479px) {
+	.main__wrap h1 {
+		font-size: 64px;
+	}
+}

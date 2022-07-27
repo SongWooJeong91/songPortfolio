@@ -8,10 +8,9 @@
 @import url(./contact.css);
 @import url(./footer.css);
 
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
 	display: none;
-}
-
+} */
 html,
 body {
 	width: 100%;
