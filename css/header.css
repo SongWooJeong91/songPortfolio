@@ -1,180 +1,161 @@
 .header__wrap {
 	width: 100%;
-	height: 100px;
+	height: 80px;
+	display: flex;
+	justify-content: space-between;
 	position: fixed;
 	top: 0;
 	left: 0;
 	z-index: 1;
-	display: none;
+	background-color: #fff;
 }
 .header__wrap h1 {
-	width: auto;
-	height: 100%;
+	width: 80px;
+	height: 80px;
 	display: flex;
 	align-items: center;
-	float: left;
-	padding: 2%;
-	/* border: 1px solid red; */
+	justify-content: center;
+	margin: 0 50px;
 }
 .header__wrap h1 a {
-	display: block;
-	padding: 10px 0 0;
+	width: 100%;
+	height: 100%;
+	padding: 12px 0 0;
+	display: inline-block;
+
 	font-size: 20px;
 }
+.header__wrap h1 a p {
+	font-family: GangwonEduPowerExtraBoldA;
+}
 .main__menu {
-	width: 50vw;
-	height: 100px;
-	display: flex;
-	justify-content: flex-end;
-	float: right;
-	padding-right: 2%;
-	/* border: 1px solid red; */
+	height: 80px;
+	margin: 0 50px;
 }
 .main__menu li {
-	width: 20%;
-	margin-left: 20px;
+	height: 100%;
+	padding: 0 30px;
 	display: inline-block;
-	text-align: right;
-	/* border: 1px solid blue; */
+	text-align: center;
 }
 .main__menu li a {
-	height: 100px;
-	line-height: 100px;
-	display: block;
-	font-size: 24px;
+	width: 100%;
+	height: 100%;
+	padding: 10px 0 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-family: GangwonEduPowerExtraBoldA;
+	font-size: 22px;
 }
-.header__wrap h1 a:hover,
-.main__menu li a:hover {
-	color: #ffdf25;
-}
+
 .ham__btnbox {
 	display: none;
 }
 
-@media all and (max-width: 1023px) {
+@media all and (max-width: 1024px) {
+	.header__wrap {
+		height: 60px;
+	}
 	.header__wrap h1 {
-		/* border: 1px solid red; */
+		width: auto;
+		height: 60px;
 		z-index: 1;
-		position: absolute;
-		top: 0;
-		left: 0;
+		margin: 0 20px;
+	}
+	.header__wrap h1 a {
+		padding: 8px 0 0;
+		display: flex;
+		align-items: center;
 	}
 	.main__nav {
 		width: 100%;
-		background-color: rgb(235, 235, 235);
-
+		height: auto;
+		padding: 60px 0 0;
 		position: absolute;
-		top: -100vh;
 		left: 0;
-		padding: 100px 0 0 0;
-		transition: all 0.6s ease-in-out;
+		top: -100vh;
+		background-color: rgb(235, 235, 235);
 	}
 	.main__menu {
 		width: 100%;
 		height: auto;
-		display: block;
-		float: none;
-		padding: 0;
-		/* border: 1px solid red; */
+		margin: 0;
 	}
 	.main__menu li {
-		width: 100%;
-		margin: 0;
-		display: inline-block;
-		text-align: center;
-		/* border: 1px solid blue; */
+		height: 60px;
+		margin: 20px;
+		display: block;
 	}
 	.main__menu li a {
-		height: 100px;
-		line-height: 100px;
-		padding-top: 0.7%;
-		display: block;
-		font-size: 24px;
+		width: 100%;
+		height: 100%;
+		padding: 10px 0 0;
+		font-size: 20px;
 	}
-	.header__wrap h1 a:hover,
-	.main__menu li a:hover {
-		background-color: #ffdf25;
-		color: #fff;
-	}
+
 	.ham__btnbox {
+		width: 60px;
+		height: 60px;
+		margin: 0 20px;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		width: 100px;
-		height: 100px;
-		/* border: 1px solid blue; */
 		position: absolute;
 		right: 0;
 		top: 0;
 		cursor: pointer;
 	}
 	.ham__btnbox span {
+		width: 32px;
+		height: 3px;
 		display: block;
-		width: 40px;
-		height: 5px;
 		background-color: #000;
-		position: relative;
-		transition: all 0.6s ease-out;
+		transition: all 0.5s ease-out;
 	}
-	.ham__btnbox span:nth-child(2) {
-		margin: 10px 0;
+	.ham__middle-btn {
+		margin: 6px 0;
 	}
-	.ham__btnbox.active span:nth-child(1) {
+	.ham__btnbox.active .ham__middle-btn {
+		display: none;
+	}
+	.ham__btnbox.active span:not(.ham__middle-btn) {
+		width: 36px;
 		position: absolute;
 		top: calc(50% - 1px);
 		transform: rotate(45deg);
 		background-color: #000;
-		width: 46px;
-	}
-	.ham__btnbox.active span:nth-child(2) {
-		display: none;
 	}
 	.ham__btnbox.active span:nth-child(3) {
-		position: absolute;
-		top: calc(50% - 1px);
 		transform: rotate(-45deg);
-		background-color: #000;
-		width: 46px;
 	}
 }
 
-@media all and (max-width: 479px) {
-	.header__wrap {
-		height: 80px;
-	}
+@media all and (max-width: 480px) {
 	.header__wrap h1 a {
-		font-size: 17px;
+		font-size: 16px;
 	}
 	.main__nav {
 		height: 100vh;
-		position: absolute;
-		top: -100vh;
-		left: 0;
-		padding: 80px 0 0 0;
-		transition: all 0.8s ease;
 	}
-	.main__menu li a {
-		height: 80px;
-		line-height: 80px;
-		display: block;
-		font-size: 24px;
+	.header__wrap h1 {
+		margin: 0 10px;
 	}
 	.ham__btnbox {
-		width: 80px;
-		height: 80px;
+		margin: 0 10px;
+	}
+	.ham__btnbox {
+		width: 30px;
 	}
 	.ham__btnbox span {
+		width: 28px;
+		height: 2px;
+	}
+	.ham__middle-btn {
+		margin: 4px 0;
+	}
+	.ham__btnbox.active span:not(.ham__middle-btn) {
 		width: 30px;
-		height: 4px;
-	}
-	.ham__btnbox span:nth-child(2) {
-		margin: 5px 0;
-	}
-	.ham__btnbox.active span:nth-child(1) {
-		width: 36px;
-	}
-	.ham__btnbox.active span:nth-child(3) {
-		width: 36px;
 	}
 }

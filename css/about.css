@@ -1,29 +1,17 @@
 .about__wrap {
 	width: 100%;
-	height: 100vh;
-	position: relative;
-}
-.about__wrap h2 {
-	font-size: 10rem;
-	font-family: GangwonEduPowerExtraBoldA;
-	position: absolute;
-	right: 0;
-	bottom: 0;
-	opacity: 0.3;
-	padding: 0 2% 0 0;
-	color: #3abafa;
-	/* color: #a5d1e6; */
+	padding: 6% 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 }
 .about__box {
 	width: 100%;
+	padding: 0 10%;
 	display: flex;
 	justify-content: space-between;
-	padding: 6% 10%;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	border: 1px solid red;
+	align-items: center;
 }
 
 .about__img {
@@ -31,25 +19,45 @@
 	margin-right: 8%;
 }
 .about__img img {
-	width: 400px;
-	height: 400px;
-	/* padding: 50px; */
-	border-radius: 50%;
-	border: 1px solid red;
+	width: 20vw;
+	border-radius: 12px;
 }
 
 .about__box p {
-	/* min-width: 800px; */
-	border: 1px solid red;
 	padding: 30px;
-	font-size: 20px;
-	line-height: 1.7;
 	display: flex;
 	align-items: center;
+	font-size: 18px;
+	line-height: 1.7;
 }
 @media all and (max-width: 1024px) {
+	.about__wrap {
+		margin: 10% 0;
+	}
+	.about__box {
+		padding: 0 6%;
+	}
+	.about__box p {
+		padding: 20px 0;
+		font-size: 16px;
+	}
 }
 @media all and (max-width: 768px) {
+	.about__box {
+		padding: 0 4%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+	.about__img {
+		margin: 0;
+	}
+	.about__box p {
+		padding: 10px 20px;
+	}
 }
-@media all and (max-width: 479px) {
+@media all and (max-width: 480px) {
+	.about__wrap {
+		margin: 20% 0;
+	}
 }

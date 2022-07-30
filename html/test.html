@@ -1,36 +1,75 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Document</title>
+		<meta charset="utf-8" />
+		<title>JavaScript</title>
 		<style>
-			div {
-				width: 100px;
-				height: 100px;
+			body {
+				font-family: Consolas, monospace;
 			}
-			.a {
-				transform: translateX(20px);
-				background-color: blueviolet;
+			p {
+				line-height: 1.6;
 			}
-			.b {
-				transform: translate(100px);
-				background-color: #ccc;
+
+			.tooltip {
+				display: inline-block;
+				color: #ff44a9;
+				font-weight: bold;
 			}
-			.c {
-				transform: translateZ(200px);
-				background-color: yellowgreen;
+
+			.tooltip-text {
+				display: none; /*평소에 안보여야 하니까 none으로*/
+				position: absolute; /*공중에 띄어져있으니까 absolute*/
+				max-width: 200px;
+				border: 1px solid;
+				border-radius: 5px;
+				padding: 5px;
+				font-size: 0.8em;
+				color: white;
+				background: #ff44a9;
 			}
-			.d {
-				background-color: aquamarine;
-			}
+
+			/* .tooltip:hover .tooltip-text {
+				display: block;
+			} */
 		</style>
 	</head>
 	<body>
-		<div class="a"></div>
-		<div class="b"></div>
-		<div class="c"></div>
-		<div class="d"></div>
+		<p>
+			Just because you can doesn't mean you should — clipboard.js 프론트
+			개발자를 위한 웹 언어에는 2가지가 있습니다.<br />
+			<span class="tooltip">
+				<a class="btn">HTML</a
+				><span class="tooltip-text">복사 되었습니다. 감사합니다.</span> </span
+			>은 웹페이지에 내용을 기술하고 뼈대라고 생각하면 됩니다.<br />
+
+			<span class="tooltip">
+				CSS<span class="tooltip-text02">Cascading Style Sheets</span> </span
+			>는 콘텐츠의 모양이나 레이아웃에 사용되는 그림이라고 생각하면 됩니다.
+		</p>
+		<button
+			class="btn"
+			data-clipboard-text="Just because you can doesn't mean you should — clipboard.js"
+		>
+			Copy to clipboard
+		</button>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.10/clipboard.min.js"></script>
+		<script>
+			var clipboard = new ClipboardJS('.btn');
+			const tooltipText = document.querySelector('.tooltip-text');
+			clipboard.on('success', function (e) {
+				console.info('Action:', e.action);
+				console.info('Text:', e.text);
+				console.info('Trigger:', e.trigger);
+				tooltipText.style.display = 'block';
+
+				e.clearSelection();
+			});
+
+			clipboard.on('error', function (e) {
+				console.error('Action:', e.action);
+				console.error('Trigger:', e.trigger);
+			});
+		</script>
 	</body>
 </html>
